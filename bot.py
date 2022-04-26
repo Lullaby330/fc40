@@ -63,12 +63,12 @@ class Bot(Client):
                 self.LOGGER(__name__).warning(f"Please Double check the FORCE_SUB_GROUP value and Make sure Bot is Admin in channel with Invite Users via Link Permission, Current Force Sub Channel Value: {FORCE_SUB_CHANNEL}")
                 self.LOGGER(__name__).info("\nBot Stopped. Join https://t.me/CodeXBotzSupport for support")
                 sys.exit()
-        if FORCE_SUB_CHANNEL:
+        if FORCE_SUB_CHANNEL4:
             try:
-                link = (await self.get_chat(FORCE_SUB_CHANNEL)).invite_link
+                link = (await self.get_chat(FORCE_SUB_CHANNEL4)).invite_link
                 if not link:
-                    await self.export_chat_invite_link(FORCE_SUB_CHANNEL)
-                    link = (await self.get_chat(FORCE_SUB_CHANNEL)).invite_link
+                    await self.export_chat_invite_link(FORCE_SUB_CHANNEL4)
+                    link = (await self.get_chat(FORCE_SUB_CHANNEL4)).invite_link
                 self.invitelink4 = link
             except Exception as a:
                 self.LOGGER(__name__).warning(a)
